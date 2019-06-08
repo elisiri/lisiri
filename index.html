@@ -7,6 +7,8 @@
   <meta charset="utf-8">
   <meta http-equiv="content-language" content="en">
   <meta property="og:image" content="./meta.png" />
+  <meta property="og:url" content="http://www.lisiri.xyz"/>
+  <meta property="og:type" content="website"/>
   <meta property="og:title" content="Elisa Ragazzini | Designer and coder in Milan"/>
 <meta property="og:description" content="Elisa Ragazzini (alias Lisiri). UI/UX designer and front-end developer in Milan. Graphic designer in the spare time."/>
   <meta property="og:site_name" content="Elisa Ragazzini | Designer and coder in Milan"/>
@@ -14,6 +16,15 @@
   <meta name="description" content="Elisa Ragazzini (alias Lisiri). UI/UX designer and front-end developer in Milan. Graphic designer in the spare time.">
   <meta name="keywords" content="web design, graphic design, front end development, designer, elisa ragazzini, milano, lisiri, digital art, ui design, ui ux">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Prompt:400,500,600,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rosario:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,500,600,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Asul:400,700" rel="stylesheet">
+
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- webgl demo -->
@@ -29,112 +40,142 @@
   <!-- <script src="./js/demo.js"></script> -->
   <script src="./js/three.min.js"></script>
   <script src="./js/perlin.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
   <!-- <script src="./js/TweenMax.min.js"></script> -->
 <div class="bgAbsolute"></div>
 <!-- <canvas class="scene scene--full" id="scene"></canvas> -->
-<div class="container-fluid main">
+<div class="container-fluid main" style="min-height: 100vh">
   <div class="navbar">
-    <img class="logoType whole" src="logo2.svg" alt="Lisiri logo">
+    <a href="https://lisiri.xyz" class="logo_a">
+      <img class="logoType logoIcon whole" src="logo-icon.svg" alt="Lisiri logo">
+    </a>
     <!-- <img class="logoType" src="type.svg"> -->
     <!-- <img class="logoIcon" src="icon.svg"> -->
     <!-- <div class="menu-icon">MENU</div> -->
-    <div class="quadratino"><div class="pallino"></div></div>
-    <div class="social">
+
+    <!-- ICONS -->
+    <!-- <div class="social">
       <a href="https://www.behance.net/lisiri"><img src="behance.svg" alt="Elisa Ragazzini on Behance"></a>
       <a href="https://www.instagram.com/elisiri/"><img src="instagram.svg" alt="Lisiri on Instagram"></a>
       <a href="https://twitter.com/elisiri_"><img src="twitter.svg" alt="Elisa Ragazzini on Twitter"></a>
-      <a href="https://www.linkedin.com/in/lisiri/"><img src="linkedin.svg" alt="Elisa Ragazzini on LinkedIn" style="width: 17px; margin-right: 2px;"></a>
-      <a href="http://lisiri-design.tumblr.com/"><img src="tumblr.svg" alt="Lisiri on Tumblr" style="width: 16px; margin-right: 3px;"></a>
+      <a href="https://www.linkedin.com/in/lisiri/"><img src="linkedin.svg" alt="Elisa Ragazzini on LinkedIn" style="width: 43px; padding-right: 14px;"></a>
+      <a href="http://lisiri-design.tumblr.com/"><img src="tumblr.svg" alt="Lisiri on Tumblr" style="width: 42px; padding-right: 15px; margin-top: 1px"></a>
+    </div> -->
+
+    <div class="social ">
+      <a href="https://www.behance.net/lisiri">Be</a>
+      <a href="https://www.instagram.com/elisiri/">Ig</a>
+      <a href="https://twitter.com/elisiri_">Tw</a>
+      <a href="https://www.linkedin.com/in/lisiri/">In</a>
     </div>
+
   </div>
-  <div class="heroText">
-    <span class="intro">
+  <div class="mePhoto">
+    <img src="duotone2.png"/>
+  </div>
+  <div class="heroText about">
+    <span class="span" onclick="closeAbout()">
+      <img class="backArrow" src="arrow.svg"/>
+    </span>
+    <span class="span">
+    My name is Elisa Ragazzini, I’m a 24 years old multi-disciplinary designer and web developer from Milan, Italy.<br>
+    </span>
+    <span class="span">
+    I strive to be involved in inspiring projects of various kind, with a focus on design & technology.<br>
+    </span>
+    <span class="span intro">
+    Currently at <a href="https://bendingspoons.com/" style="color: inherit;" target="_blank">Bending Spoons</a>.
+    </span>
+  </div>
+  <div class="smallText about">
+    <b>When I’m not at work or browsing <a href="https://muz.li/" target="_blank">Muzli</a>, you can find me:</b>
+    <ul>
+      <li>playing <a href="https://heroesofthestorm.com/it-it/" target="_blank">Heroes of the Storm</a> (90% of times)</li>
+      <li>in a bookstore</li>
+      <li>punching things and people (at the gym)</li>
+      <li>reading a <a href="https://www.amazon.it/verit%C3%A0-sul-caso-Harry-Quebert/dp/8845282678/ref=asap_bc?ie=UTF8" target="_blank">crime novel</a></li>
+      <li>downloading indie videogames that I probably won’t play</li>
+    </ul>
+  </div>
+
+  <div class="heroText" id="heroText">
+    <div id="me">
+      <img id="me-img" src="square-me.png"/>
+    </div>
+    <span class="intro span">
     Elisa ( alias
-    <b class="fallbackLiquid">Lisiri</b>
+    <a class="fallbackLiquid" id="lisiri" onclick="openAbout()">Lisiri</a>
     <span id="distorted" ></span>
-    ) here. </span><br><br>
+    ) here. </span><br>
+    <span class="span">
     I
-    <b class="fallbackLiquid">design</b>
+    <span class="fallbackLiquid">design</span>
     <span id="distorted1" ></span>
     and
-    <b class="fallbackLiquid">code</b>
+    <span class="fallbackLiquid">code</span>
     <span id="distorted2" ></span>
-    websites and interfaces in Milan,
-making digital art and graphic design in the meantime. <br>
-Message me if you want to build something awesome together!
+    interfaces and websites in Milan,
+    sometimes making digital art and graphic design too.</span> <br>
 
-    </div>
-    <div class="smallText">
+    <span class="span">Get in touch if you want to build something awesome together.</span>
+  </div>
+  <div class="smallText" id="smallText">
       You can find me on <a href="https://twitter.com/elisiri_">Twitter</a> and <a href="https://www.instagram.com/elisiri/">Instagram</a>, see my projects on <a href="https://www.behance.net/lisiri">Behance</a>, peek at some
 work-in-progress on <a href="http://lisiri-design.tumblr.com/">Tumblr</a> and connect to my <a href="https://www.linkedin.com/in/lisiri/">LinkedIn</a>.
 
-      </div>
-</div>
-
-
-<!-- <section class="container-fluid smallpad">
-<div class="row" style="margin-top:130px; margin-left:0; margin-right:0">
-  <div class="col-3 smallpad">
-    <div class="box-vivo">
-      <div class="box-vivo-overlay uno">
-
-      </div>
-    </div>
-  </div>
-  <div class="col-3 smallpad">
-    <div class="box-vivo">
-      <div class="box-vivo-overlay due">
-
-      </div>
-    </div>
-  </div>
-  <div class="col-3 smallpad">
-    <div class="box-vivo">
-      <div class="box-vivo-overlay">
-
-      </div>
-    </div>
-  </div>
-  <div class="col-3 smallpad">
-    <div class="box-vivo">
-      <div class="box-vivo-overlay">
-
-      </div>
-    </div>
   </div>
 </div>
+
+
+<!-- <section class="container-fluid nopad" id="projects">
+  <a href="#projects">
+    <div class="works-btn">
+      <img src="./arrow-logo.svg" class="arrow-logo" style="transform: rotate(180deg)"/>
+      SOME OF MY WORKS
+    </div>
+  </a>
+  <div class="row" style="margin-left:0; margin-right:0">
+    <div class="col-6 nopad">
+      <div class="box-cont" id="box" onmouseover="labelAppear()" onmouseout="labelVanish()">
+        <div class="box-vivo" >
+          <div class="box-vivo-overlay a">
+            <div class="labels">
+              <div class="label">Project Title</div><br>
+              <div style="margin-top: -15px;">
+                <div class="underlabel">Web design</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 nopad">
+      <div class="box-cont" id="box" onmouseover="labelAppear()" onmouseout="labelVanish()">
+        <div class="box-vivo" >
+          <div class="box-vivo-overlay b">
+            <div class="labels">
+              <div class="label">Project Title</div><br>
+              <div style="margin-top: -15px;">
+                <div class="underlabel">Web design</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section> -->
 
 
-<!-- <section class="container">
-<div class="row" style="margin-top:90px">
-  <div class="col-3">
-    <div class="box">
 
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="box">
-
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="box">
-
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="box">
-
-    </div>
-  </div>
-</div>
-</section> -->
-
-
-<div class="footer container-fluid">
+<!-- <div class="footerOld container-fluid">
   <div class="pallino"></div>
   From Elisa Ragazzini with ❤, 2018.
+</div> -->
+
+<div class="footer container-fluid">
+  From Elisa Ragazzini with <span style="color: #6655FF; color: #fff">❤</span>, 2018.
 </div>
 
   <!-- <script src="./js/demo4.js"></script> -->
@@ -144,53 +185,9 @@ work-in-progress on <a href="http://lisiri-design.tumblr.com/">Tumblr</a> and co
 <script src="./js/materials/channelSplitMaterial.js"></script>
 <script src="./js/materials/fliesMaterial.js"></script>
 <script src="./js/materials/liquidDistortMaterial.js"></script> -->
-<script>
-      // var lisiri = new Blotter.Text("Lisiri", {
-      //   family : "Work Sans",
-      //   size : 33,
-      //   fill : "#1F25FA",
-      //   weight: 500,
-      //   leading: 0.8,
-      //   needsUpdate: true
-      // });
-      // var design = new Blotter.Text("design", {
-      //   family : "Work Sans",
-      //   size : 33,
-      //   fill : "#1F25FA",
-      //   weight: 500,
-      //   leading: 1,
-      //   needsUpdate: true
-      // });
-      // var code = new Blotter.Text("code", {
-      //   family : "Work Sans",
-      //   size : 33,
-      //   fill : "#1F25FA",
-      //   weight: 500,
-      //   leading: 0.8,
-      //   needsUpdate: true
-      // });
-      //
-      // var material = new Blotter.LiquidDistortMaterial();
-      // material.uniforms.uVolatility.value = 0.05
-      // material.uniforms.uSpeed.value = 0.3
-      //
-      // var blotter = new Blotter(material, {
-      //   texts : [lisiri, design, code]
-      // });
-      // var containerLisiri = document.getElementById("distorted");
-      // var containerDesign = document.getElementById("distorted1");
-      // var containerCode = document.getElementById("distorted2");
-      // var scopeLisiri = blotter.forText(lisiri);
-      // var scopeDesign = blotter.forText(design);
-      // var scopeCode = blotter.forText(code);
-      //
-      // scopeLisiri.appendTo(containerLisiri);
-      // scopeDesign.appendTo(containerDesign);
-      // scopeCode.appendTo(containerCode);
 
-
-</script>
-
+<script src="js/custom.js"></script>
+<script src="js/anime.min.js"></script>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
