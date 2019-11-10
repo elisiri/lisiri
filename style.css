@@ -220,14 +220,14 @@ body {
 	/* height: 100%; */
 	height: 170px;
 }
-.intro a {
+.intro a, .link {
 	display: inline-block;
 	/* font-weight: 600; */
 	transition: 0.3s;
 	text-decoration: underline !important;
 	cursor: url('./link.png'), auto;
 }
-.intro a::before {
+.intro a::before, .link::before {
 	content: '';
 	width: 0;
 	height: 59px;
@@ -238,7 +238,7 @@ body {
 	mix-blend-mode: screen;
 	transition: 0.2s;
 }
-.intro a:hover {
+.intro a:hover, .link:hover {
 	color: #fff !important;
 	text-decoration: none !important;
 }
@@ -273,7 +273,7 @@ body {
 	color: #fff;
 	text-decoration: none;
 }
-.smallText a:hover::before, .footerOld a:hover::before, .intro a:hover::before {
+.smallText a:hover::before, .footerOld a:hover::before, .intro a:hover::before, .link:hover::before {
 	width: 100%;
 }
 .smallText a::before, .footerOld a::before {
