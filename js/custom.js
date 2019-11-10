@@ -129,7 +129,7 @@ function openAbout() {
 			// projects.style.display = 'none';
 			heroAbout.style.display = 'block';
 			smallAbout.style.display = 'block';
-			photoAbout.style.width = '390px';
+			photoAbout.style.width = '410px';
 			photoAbout.style.opacity = 1;
 			// ENTRATA ABOUT
 			var aboutHeroEnter = anime({

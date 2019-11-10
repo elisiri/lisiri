@@ -499,19 +499,22 @@ body {
 	right: 0;
 	margin-top: 120px;
   margin-top: 13vh;
-	height: 260px;
+	height: 280px;
 	width: 0;
 	z-index: -1;
 	opacity: 0;
 	overflow: hidden;
 	transition: 1s cubic-bezier(0, 0.32, 0, 0.99);
 	transition-delay: .2s;
+	background-image: url('./duotone2.png');
+	background-position: right;
+	background-size: cover;
 }
-.mePhoto img {
+/* .mePhoto img {
 	height: 100%;
 	position: absolute;
 	right: 0;
-}
+} */
 
 .smallText.about {
 	width: 100%;
@@ -586,6 +589,7 @@ body {
 		position: fixed;
     right: -200px;
 		margin-top: 9vh;
+		background-position: 300px;
 	}
 }
 
