@@ -3,8 +3,11 @@
 var me = document.getElementById("me");
 var lisiri = document.getElementById("lisiri");
 
-// var labels = document.getElementsByClassName("labels")[0];
-// var box = document.getElementById("box");
+// PROJECTS
+var labels = document.getElementsByClassName("labels");
+var label;
+var box = document.getElementById("box");
+
 document.addEventListener("mousemove", getMouse);
 lisiri.addEventListener("mouseover", appear);
 lisiri.addEventListener("mouseout", vanish);
@@ -14,34 +17,97 @@ var isHoveringBox;
 var mepos = {x:0, y:0};
 setInterval(followMouse, 50);
 var mouse = {x:0, y:0}; //mouse.x, mouse.y
-// var dir = "right";
+
+var dir = "right";
+
+$( document ).ready(() => {
+    // appendProjects();
+});
+
+//APPEND PROJECTS
+function appendProjects() {
+	var string = '';
+
+	for (i = 0; i < projectsArray.length; i++) {
+		var project = projectsArray[i];
+		// check if the project is a multiple of 2 - needed to print the rows' divs
+		if (i % 2 == 0) {
+			string += (
+				'<div class="row" style="margin-left:0; margin-right:0">' +
+
+  			'<div class="col-6 nopad">' +
+  	      '<div class="box-cont" id="box" onmouseover="labelAppear('+ i + ')" onmouseout="labelVanish()">' +
+  	        '<div class="box-vivo" >' +
+  	          '<div class="box-vivo-overlay ' + project.cssClass + '">' +
+  	            '<div class="labels">' +
+  	              '<div class="label">' + project.title + '</div><br>' +
+  	              '<div style="margin-top: -15px;">' +
+  	                '<div class="underlabel">' + project.subtitle + '</div>' +
+  	              '</div>' +
+  	            '</div>' +
+  	          '</div>' +
+						'</div>' +
+					'</div>' +
+				 '</div>' )
+
+	 	} else {
+			string += (
+				'<div class="col-6 nopad">' +
+					'<div class="box-cont" id="box" onmouseover="labelAppear('+ i + ')" onmouseout="labelVanish()">' +
+						'<div class="box-vivo" >' +
+							'<div class="box-vivo-overlay ' + project.cssClass + '">' +
+								'<div class="labels">' +
+									'<div class="label">' + project.title + '</div><br>' +
+									'<div style="margin-top: -15px;">' +
+										'<div class="underlabel">' + project.subtitle + '</div>' +
+									'</div>' +
+								'</div>' +
+							'</div>' +
+						'</div>' +
+					'</div>' +
+				'</div>'
+
+				+ '</div>')
+
+		}
+		if (i === projectsArray.length - 1) {
+			$('#projects').append(string);
+		}
+	}
+
+
+}
 
 function getMouse(e){
 	mouse.x = e.pageX;
 	mouse.y = e.pageY;
-  //console.log(e.pageY);
-  // if (window.pageYOffset > 0)
-	// 	labels.style.marginTop = '-' + (window.pageYOffset) + 'px'
-  // else
-	// 	labels.style.marginTop = 0;
-  //Checking directional change
-  // if(mouse.x > mepos.x){
-  //   dir = "right";
-  // } else {
-  //   dir = "left";
-  // }
+
+  // console.log(e.pageY);
+	if (label) {
+		if (window.pageYOffset > 0)
+			label.style.marginTop = '-' + (window.pageYOffset) + 'px'
+		else
+			label.style.marginTop = 0;
+	}
+
+  // Checking directional change
+  if(mouse.x > mepos.x){
+    dir = "right";
+  } else {
+    dir = "left";
+  }
 }
 
 function appear() {
-  // me.setAttribute("style", "height: 170px");
   me.style.height = '170px';
   me.style.width = '170px';
   me.style.opacity = 1;
 }
 
-// function labelAppear() {
-//   isHoveringBox = true;
-// }
+function labelAppear(index) {
+	isHoveringBox = true;
+	label = labels[index];
+}
 
 function followMouse(){
 	//1. find distance X , distance Y
@@ -59,33 +125,33 @@ function followMouse(){
 		me.style.left = mepos.x + "px";
 		me.style.top = mepos.y + "px";
 	}
-  // if (isHoveringBox) {
-  //   labels.style.left = mepos.x + "px";
-  //   labels.style.top = mepos.y + "px";
-  // }
+  if (isHoveringBox) {
+    label.style.left = mepos.x + "px";
+    label.style.top = mepos.y + "px";
+  }
+
   //Apply css class
-  // if (dir == "right"){
-  //   me.setAttribute("class", "right");
-  // } else {
-  //   me.setAttribute("class", "left");
-  // }
+  if (dir == "right"){
+    me.setAttribute("class", "right");
+  } else {
+    me.setAttribute("class", "left");
+  }
 }
 
 function vanish() {
-  // me.setAttribute("style", "height: 0");
   me.style.height = 0;
   me.style.width = 0;
   me.style.opacity = 0;
 }
-// function labelVanish() {
-//   isHoveringBox = false;
-// }
+function labelVanish() {
+  isHoveringBox = false;
+}
 
 // ..........................................pagina About .......................
 
 var heroText = document.querySelector('#heroText');
 var smallText = document.querySelector('#smallText');
-// var projects = document.querySelector('#projects');
+var projects = document.querySelector('#projects');
 var mainContainer = document.querySelector('.main');
 var photoAbout = document.querySelector('.mePhoto');
 var heroAbout = document.querySelector('.heroText.about');

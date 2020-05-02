@@ -1,10 +1,11 @@
-<svg id="left-arrow_1_" data-name="left-arrow (1)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.954 12.38">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #3a25fa;
-      }
-    </style>
-  </defs>
-  <path id="Path_240" data-name="Path 240" class="cls-1" d="M19.09,5.326H2.949L6.8,1.474A.864.864,0,1,0,5.579.253L.253,5.579a.863.863,0,0,0,0,1.221l5.326,5.326A.864.864,0,0,0,6.8,10.906L2.949,7.054H19.09a.864.864,0,1,0,0-1.727Z" transform="translate(0 0)"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="left-arrow_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 20 12.4" style="enable-background:new 0 0 20 12.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#3A25FA;stroke-width:2.5;stroke-miterlimit:10;}
+</style>
+<line class="st0" x1="2.4" y1="6.2" x2="20" y2="6.2"/>
+<line class="st0" x1="1" y1="6.8" x2="6.8" y2="0.9"/>
+<line class="st0" x1="0.9" y1="5.1" x2="7.3" y2="11.4"/>
 </svg>

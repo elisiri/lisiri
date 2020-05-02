@@ -234,8 +234,8 @@ body {
 	position: relative;
 	margin-bottom: -63px;
 	display: block;
-	background-color: #1F25FA;
-	mix-blend-mode: screen;
+	background-color: #1F25FA !important;
+	z-index: -1;
 	transition: 0.2s;
 }
 .intro a:hover, .link:hover {
@@ -284,7 +284,7 @@ body {
 	margin-bottom: -20px;
 	display: block;
 	background-color: #1F25FA;
-	mix-blend-mode: screen;
+	z-index: -1;
 	transition: 0.2s;
 }
 .singleProject .smallText {
@@ -342,18 +342,17 @@ body {
   background-image: url('https://picsum.photos/900/700/?random');
   height: 101%;
   cursor: pointer;
-  transition: 0.45s;
+  transition: 0.3s;
   width: 101%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-	/* position: relative; */
 }
 .box-vivo:hover {
-	height: 104%;
-	width: 104%;
-	margin-left: -2%;
-	margin-top: -1%;
+	width: 103%;
+	height: 103%;
+	margin-left: -1%;
+	margin-top: -0.5%:
 }
 .box-vivo:hover .box-vivo-overlay {
   opacity: 1;
@@ -374,10 +373,28 @@ body {
   /* border: 3px solid rgba(255, 255, 255, 0.8); */
 }
 .a {
-  background-color: rgba(58, 37, 250, 0.28);
+  background-color: rgba(69, 0, 255, 0.20);
+}
+.a .label::before, .a .underlabel::before {
+	background-color: #885FD6;
 }
 .b {
   background-color: rgba(240, 94, 116, 0.28);
+}
+.b .label::before, .b .underlabel::before {
+	background-color: #F05E74;
+}
+.c {
+  background-color: rgba(58, 37, 250, 0.28);
+}
+.c .label::before, .c .underlabel::before {
+	background-color: #1F25FA;
+}
+.d {
+  background-color: rgba(255, 144, 75, 0.20);
+}
+.d .label::before, .d .underlabel::before {
+	background-color: #FF904B;
 }
 .uno {
   background: -moz-linear-gradient(-45deg, rgba(200,64,249,0.8) 0%, rgba(142,114,255,0.8) 100%); /* FF3.6-15 */
@@ -411,6 +428,7 @@ body {
 	font-size: 27px;
 	color: #fff;
 	font-weight: 600;
+	white-space: nowrap;
 }
 .underlabel {
 	font-size: 16px;
@@ -418,6 +436,7 @@ body {
 	transition-delay: .1s;
 	display: inline-flex;
 	position: relative;
+	white-space: nowrap;
 }
 .label::before {
 	content: '';
@@ -429,7 +448,6 @@ body {
 	z-index: -1;
 	/* margin-bottom: -20px; */
 	display: inline-flex;
-	background-color: #1F25FA;
 	transition: 0.25s;
 	transition-delay: .1s;
 }
@@ -441,7 +459,6 @@ body {
 	margin-top: -10px;
 	margin-left: -25px;
 	z-index: -1;
-	background-color: #1F25FA;
 	transition: 0.25s;
 	transition-delay: .2s;
 }
@@ -479,7 +496,7 @@ body {
 } */
 
 .backArrow {
-	height: 75px;
+	height: 78px;
 	padding: 30px;
 	width: 100px;
 	display: block;
@@ -491,7 +508,7 @@ body {
 }
 .backArrow:hover {
 	opacity: 0.5;
-	margin-left: -50px;
+	margin-left: -40px;
 }
 
 .mePhoto {
