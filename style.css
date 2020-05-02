@@ -23,6 +23,16 @@
 	font-style: normal;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #1F25FA;
+}
+
+::selection {
+  color: white;
+  background: #1F25FA;
+}
+
 body {
   font-family: 'Work Sans';
   /* font-family: 'Circular'; */
@@ -45,7 +55,6 @@ body {
 	/* background-color: #161c22; */
 	/* background-color: rgb(255, 224, 224); */
 }
-
 
 .bgAbsolute {
 	position: absolute;
