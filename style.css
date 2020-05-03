@@ -33,6 +33,10 @@
   background: #1F25FA;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Work Sans';
   /* font-family: 'Circular'; */
@@ -44,7 +48,6 @@ body {
 	/* font-family: 'Rosario', sans-serif; */
 	/* font-family: 'Proza Libre', sans-serif; */
 	/* font-family: 'Asul', sans-serif; */
-
 
 
   font-weight: normal;
@@ -642,6 +645,10 @@ body {
 	#distorted, #distorted1, #distorted2 {
 		display: none;
 		width: 0;
+	}
+
+	.main {
+		padding-bottom: 10vh;
 	}
 
 	.footerOld {
