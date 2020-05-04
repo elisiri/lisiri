@@ -31,10 +31,11 @@ $( document ).ready(() => {
 
     // appendProjects();
 
-		if (!isMobile) {
-			$('#wrapper').wrap("<div id='smoothscroll' style='height: 100vh; width: 100vw; overflow:scroll; -webkit-overflow-scrolling: touch; position:absolute; padding-bottom: 0'>");
-			$('#smoothscroll').smoothWheel();
-		}
+		// Creates a wrapper for the smooth wheel, but gives bugs so I keep it disabled
+		// if (!isMobile) {
+		// 	$('#wrapper').wrap("<div id='smoothscroll' style='height: 100vh; width: 100vw; overflow:scroll; -webkit-overflow-scrolling: touch; position:absolute; padding-bottom: 0'>");
+		// 	$('#smoothscroll').smoothWheel();
+		// }
 
 });
 
